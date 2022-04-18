@@ -15,6 +15,12 @@ assets:
 data:
   defaultDeviceType: genericx86-64-ext
   supportedDeviceTypes:
+    - raspberrypi4-64
+    - fincm3
+    - raspberrypi3
+    - raspberrypi3-64
+    - raspberrypi400-64
+    - intel-nuc
     - genericx86-64-ext
     
 version: 0.0.1
