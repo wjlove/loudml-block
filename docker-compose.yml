@@ -1,0 +1,14 @@
+version: '2.1'
+volumes:
+    loudml-data:
+#
+services:
+#
+  loudml:
+    restart: always
+    build: ./loudml
+    volumes:
+      - loudml-data:/var/lib/loudml
+    ports:
+      - 8077:8077
+

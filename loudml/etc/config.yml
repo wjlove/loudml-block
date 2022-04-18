@@ -1,0 +1,20 @@
+---
+buckets:
+  - name: loudml
+    type: influxdb
+    addr: influxdb:8086
+    database: loudnml
+    retention_policy: autogen
+    measurement: loudml
+    annotation_db: loudmlannotations
+  - name: balena
+    type: influxdb
+    addr: influxdb:8086
+    database: balena
+    retention_policy: autogen
+
+storage:
+  path: /var/lib/loudml
+
+server:
+  listen: 0.0.0.0:8077
