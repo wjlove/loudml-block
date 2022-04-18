@@ -3,7 +3,7 @@
 Loud ML is an open source inference engine for metrics and events, and the fastest way to embed machine learning in your time series application. This includes APIs for storing and querying data, processing it in the background for ML or detecting outliers for alerting purposes, and more.  More information can be found [here](https://github.com/regel/loudml).
 
 
-This block attempts to create a simple balena Block for inclusion in any project.  Please be aware that this block only runs the Loud ML service
+This block attempts to create a simple balena Block for inclusion in any project.  Please be aware that this block only runs the Loud ML tool.
 
 ## Usage
 
