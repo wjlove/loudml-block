@@ -1,9 +1,22 @@
-## Loud ML
+loudml-block
 
 Loud ML is an open source inference engine for metrics and events, and the fastest way to embed machine learning in your time series application. This includes APIs for storing and querying data, processing it in the background for ML or detecting outliers for alerting purposes, and more.  More information can be found [here](https://github.com/regel/loudml).
 
+This block attempts to create a simple balena Block for Loud ML inclusion in any project.  Please be aware that this block only runs the Loud ML tool.
 
-This block attempts to create a simple balena Block for inclusion in any project.  Please be aware that this block only runs the Loud ML tool.
+## Loud ML Features
+
+* Built-in HTTP API that facilitates the integration in other applications
+* Data agnostic. The ML engine consumes data from different buckets to achieve seamless data experience. Supported data buckets include:
+  - [ElasticSearch](https://github.com/elastic/elasticsearch)
+  - [InfluxDB](https://github.com/influxdata/influxdb)
+  - [MongoDB](https://github.com/mongodb/mongo)
+  - [OpenTSDB](https://github.com/OpenTSDB/opentsdb). Contributed by Volodymyr Sergeyev
+* JSON configuration
+* Simple to install and manage
+* Donut unsupervised learning model [arXiv 1802.03903](https://arxiv.org/abs/1802.03903)
+* Data processing in near real-time: data buckets are queried
+  at regular intervals and feed the inference engine to return results
 
 ## Usage
 
@@ -67,10 +80,10 @@ Loud ML shell 1.6.3
 
 ## Heatlh Check
 
-You can query the API from within the container to check the service is running properly:
+You can query the API from a remote host to check the service is running properly:
 
 ```
-$ curl http://localhost:8077
+$ curl http://<loudml-ip-address>:8077
 
 {"host_id":"86fe1a2bf19f89e83cee363f934d6bbe","tagline":"The Disruptive Machine Learning API","version":"1.6.0"}
 ```
