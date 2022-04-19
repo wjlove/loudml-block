@@ -41,7 +41,7 @@ services:
 
 ### config.yml
 
-The config.yml tells Loud ML what data sources are available for use and can be found in ./loudml/etc.  The default is to use InfluxDB as both a source and destination for data, the bucket "balena" contains the information to be analyzed and the bucket "loudml" will contain he results.
+The config.yml tells Loud ML what data sources are available for use and can be found in ./loudml/etc.  The default is to use InfluxDB as both a source and destination for data, the bucket "balena" contains the information to be analyzed and the bucket "loudml" will contain the results.
 
 ```
 buckets:
