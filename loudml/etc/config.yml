@@ -1,17 +1,21 @@
 ---
 buckets:
-  - name: loudml
+# This is the source of data to be used by loudml block.
+  - name: balena-in
+    type: influxdb
+    addr: influxdb:8086
+    database: balena
+    measurement: mqtt_consumer
+    retention_policy: autogen
+# Loudml can put results here.  Create the database if missing and create an annotation database just in case they are used.
+  - name: loudml-out
     type: influxdb
     addr: influxdb:8086
     database: loudnml
     retention_policy: autogen
-    measurement: loudml
+    create_database: true
+    measurement: loudml_mqtt_consumer
     annotation_db: loudmlannotations
-  - name: balena
-    type: influxdb
-    addr: influxdb:8086
-    database: balena
-    retention_policy: autogen
 
 storage:
   path: /var/lib/loudml
